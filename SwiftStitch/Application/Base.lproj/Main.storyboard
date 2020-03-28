@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Fzk-gv-q9w">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sw View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SwViewController" customModule="SwiftStitch" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UvU-XX-KE7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </scrollView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="3AV-ht-xfb">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UvU-XX-KE7" secondAttribute="bottom" id="8Hf-lt-uot"/>
+                            <constraint firstItem="UvU-XX-KE7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EbT-43-RTy"/>
+                            <constraint firstItem="UvU-XX-KE7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dex-vL-KbJ"/>
+                            <constraint firstAttribute="centerX" secondItem="3AV-ht-xfb" secondAttribute="centerX" id="lbN-sm-0JA"/>
+                            <constraint firstAttribute="centerY" secondItem="3AV-ht-xfb" secondAttribute="centerY" id="oi5-Wh-C2H"/>
+                            <constraint firstAttribute="trailing" secondItem="UvU-XX-KE7" secondAttribute="trailing" id="t8e-J0-zvh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lxB-rb-UBO">
+                        <barButtonItem key="rightBarButtonItem" title="Panaroma" id="pkq-qF-NA1">
+                            <connections>
+                                <segue destination="7MB-u5-CeJ" kind="presentation" modalPresentationStyle="fullScreen" id="Kh8-qc-cgi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="scrollView" destination="UvU-XX-KE7" id="IZj-JX-Ff4"/>
+                        <outlet property="spinner" destination="3AV-ht-xfb" id="379-eg-8QM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="943.47826086956525" y="30.803571428571427"/>
+        </scene>
+        <!--PanaromaViewController-->
+        <scene sceneID="Yuq-V4-HU2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PanaromaViewController" id="7MB-u5-CeJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JqE-yj-xpE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1631" y="-143"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ub8-Wm-TpX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fzk-gv-q9w" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t2I-cD-wGf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VdO-y1-GJ6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="26K-VL-W7a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33.333333333333336" y="30.803571428571427"/>
+        </scene>
+    </scenes>
+</document>
