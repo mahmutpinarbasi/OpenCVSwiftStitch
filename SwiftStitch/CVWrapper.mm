@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 foundry. All rights reserved.
 //
 
-#import "CVWrapper.h"
 #import "UIImage+OpenCV.h"
+#import "CVWrapper.h"
 #import "stitching.h"
 #import "UIImage+Rotate.h"
 
