@@ -12,8 +12,8 @@
 //  appreciated but not required.
 //
 
-#import <UIKit/UIKit.h>
 #import <opencv2/opencv.hpp>
+#import <UIKit/UIKit.h>
 
 @interface UIImage (OpenCV)
 

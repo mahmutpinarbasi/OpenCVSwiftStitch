@@ -293,3 +293,5 @@ xcdebugger/
 # if you do not make a commandline commit before using XCode again)
 #
 # now you can use your project in XCode
+
+xcuserdata
